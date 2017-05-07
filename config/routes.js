@@ -34,7 +34,10 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
+
+  'get /hi': 'UserController.hi',
+  'get /bye': 'UserController.bye'
 
   /***************************************************************************
   *                                                                          *

@@ -82,7 +82,11 @@ module.exports.connections = {
   //   database: 'YOUR_POSTGRES_DB' //optional
   // }
 
-
+  postgresDevelopment: {
+    adapter: 'sails-postgresql',
+    url: 'postgres://postgres@localhost/cheeger_development',
+    ssl: false
+  }
   /***************************************************************************
   *                                                                          *
   * More adapters: https://github.com/balderdashy/sails                      *
