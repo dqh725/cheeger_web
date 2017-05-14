@@ -1,7 +1,9 @@
 <div class='container page'>
 	<h1><%= post.title %> </h1>
 	<h3><%= post.solution %> </h3>
-	<hr>
+	<h3>#<%= post.lookupCount %> </h3>
+  
+  <hr>
   <h3>Created At: <%= post.createdAt %> </h3>
 	<a class="btn btn-medium btn-primary" href="/post/edit/<%= post.id %>">Edit</a>
 </div>

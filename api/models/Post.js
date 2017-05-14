@@ -15,11 +15,14 @@ module.exports = {
     },
 
     solution : {
-      type: 'string'
+      type: 'string',
+      required: true
     },
 
-    lookupCount : { type: 'integer' }
-
+    lookupCount : { 
+      type: 'integer',
+      defaultsTo: 0
+    }
   }
 };
 
