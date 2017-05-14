@@ -33,12 +33,17 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'homepage'
+    view: 'index'
   },
 
   'get /hi': 'UserController.hi',
-  'get /bye': 'UserController.bye'
+  'get /bye': 'UserController.bye',
 
+
+  'get /post': 'PostController.index',
+  'post /post': 'PostController.create',
+  'put /post/update/:id': 'PostController.update',
+  'delete /post/:id': 'PostConreoller.destroy'
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

@@ -1,0 +1,34 @@
+
+<div class="container">
+	<h3>post Administration</h3>
+	<table class='table'>
+		<tr>
+			<th></th>
+			<th>ID</th>
+			<th>Title</th>
+			<th>Solution</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+		
+
+		<% _.each(posts, function(post) { %>
+		<tr data-id="<%= post.id %>" data-model="post">
+			<% if (post.online) { %>
+				<td><img src="/images/icon-online.png"></td>
+			<% } else { %>
+				<td> <img src="/images/icon-offline.png"></td>
+			<% } %>
+			<td><%= post.id %></td>
+			<td><%= post.title %></td>
+			<td><%= post.solution %></td>
+			<td><a href="/post/show/<%= post.id %>" class="btn btn-sm btn-primary">Show</a></td>
+			<td><a href="/post/edit/<%= post.id %>" class="btn btn-sm btn-warning">Edit</a></td>
+			<td><form action="/post/destroy/<%= post.id %>" method="delete">
+				<input type="submit" class="btn btn-sm btn-danger" value="Delete"/>
+        </form></td>
+		</tr> 
+		<% }) %>
+	</table>
+</div>

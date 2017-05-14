@@ -1,0 +1,21 @@
+{
+  "name": "cheeger",
+  "description": "a Sails application",
+  "main": "app.js",
+  "authors": [
+    "Alba"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/dqh725/cheeger_web",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

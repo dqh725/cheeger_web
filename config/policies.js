@@ -17,6 +17,14 @@
  */
 
 
+var auth = require('http-auth');
+var basic = auth.basic({
+        realm: "Alba Area."
+    }, function (username, password, callback) { // Custom authentication.
+        callback(username === "alba" && password === "password");
+    }
+);
+
 module.exports.policies = {
 
   /***************************************************************************
@@ -26,7 +34,7 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  // '*': true,
+  '*': auth.connect(basic),
 
   /***************************************************************************
   *                                                                          *
