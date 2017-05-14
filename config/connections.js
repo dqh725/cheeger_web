@@ -92,7 +92,9 @@ module.exports.connections = {
     adapter: 'sails-postgresql',
     url: 'postgres://postgres@localhost/cheeger_production',
     user: process.env.POSTGRES_USER,
-    password: process.env.POSTGRES_PASSWORD
+    password: process.env.POSTGRES_PASSWORD,
+    ssl: false
+
   }
   /***************************************************************************
   *                                                                          *
