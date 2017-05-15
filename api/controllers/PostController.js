@@ -9,7 +9,7 @@ module.exports = {
 
   index: function(req, res) {
     Post.find(function foundPosts(err, posts) {
-      if (err) return next(err);
+      if (err) return sails.log(err);
       // pass the array down to the /views/index.ejs page
       res.view({
         posts: posts
