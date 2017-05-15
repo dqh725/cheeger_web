@@ -4,8 +4,10 @@ exports.up = function(knex, Promise) {
     table.increments('id');
     table.string('title');
     table.string('solution');
-    table.integer('lookupcount');
-  });  
+    table.integer('lookupCount');
+    table.dateTime('createdAt');
+    table.dateTime('updatedAt');
+  });
 };
 
 exports.down = function(knex, Promise) {

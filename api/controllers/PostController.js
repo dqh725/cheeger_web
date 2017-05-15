@@ -9,7 +9,9 @@ module.exports = {
 
   index: function(req, res) {
     Post.find(function foundPosts(err, posts) {
-      if (err) return sails.log(err);
+      if (err) {
+        return sails.log.error(err);
+      }
       // pass the array down to the /views/index.ejs page
       res.view({
         posts: posts
@@ -25,6 +27,7 @@ module.exports = {
     //req.method = 'POST'
     Post.create(req.params.all()).exec(function (err, post) {
       if ( err ) {
+        sails.log.error(err);
         return res.redirect('/post/new');
       }
       else {
