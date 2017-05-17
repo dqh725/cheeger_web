@@ -43,10 +43,13 @@ module.exports = {
         return next(err);
       }
       else if (!post){
-        return next(); 
+        return next();
       }
       else {
-        res.view({ post: post });
+        Post.update(post.id, { lookupCount: post.lookupCount + 1 }, function (err) {
+          sails.log('added the count:', post.lookupCount);
+          res.view({ post: post });
+        });
       }
     });
   },
@@ -57,7 +60,7 @@ module.exports = {
         return next(err);
       }
       else if (!post){
-        return next(); 
+        return next();
       }
       else {
         res.view({ post: post });

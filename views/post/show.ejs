@@ -1,9 +1,9 @@
 <div class='container page'>
-	<h1><%= post.title %> </h1>
-	<h3><%= post.solution %> </h3>
-	<h3>#<%= post.lookupCount %> </h3>
-  
+	<h1>Q: <%= post.title %> </h1>
+	<h3>A: <%= post.solution %> </h3>
   <hr>
-  <h3>Created At: <%= post.createdAt %> </h3>
+  <h3>Date: <%= post.createdAt.toLocaleDateString("en-US") %> </h3>
+  <a class="btn btn-medium btn-primary" href="/post/index">Home</a>
 	<a class="btn btn-medium btn-primary" href="/post/edit/<%= post.id %>">Edit</a>
+
 </div>
