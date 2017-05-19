@@ -18,7 +18,7 @@
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
   'styles/**/*.css',
-  'bootstrap3/css/bootstrap.css'
+  'bower_components/bootstrap/dist/css/bootstrap.min.css'
 ];
 
 
@@ -35,6 +35,7 @@ var jsFilesToInject = [
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
   // 'js/**/*.js''
+  'bower_components/rainyday.js'
 ];
 
 
