@@ -1,9 +1,18 @@
 <div class='container page'>
 	<h1>Q: <%= post.title %> </h1>
-	<h3>A: <%= post.solution %> </h3>
+  <div id="show-solution" class="grey-card"></div>
   <hr>
   <h3>Date: <%= post.createdAt.toLocaleDateString("en-US") %> </h3>
   <a class="btn btn-medium btn-primary" href="/post/index">Home</a>
-	<a class="btn btn-medium btn-primary" href="/post/edit/<%= post.id %>">Edit</a>
-
+	<a class="btn btn-medium btn-primary" href="/post/edit/<%= post.id %>">Edit</a> 
 </div>
+
+<script>
+$('document').ready (function () {
+  var converter = new showdown.Converter();
+  var text = <%- JSON.stringify({ content: post.solution })%>.content;
+  var html = converter.makeHtml(text);
+  $('#show-solution').append(html);
+});
+
+</script>

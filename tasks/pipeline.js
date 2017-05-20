@@ -18,7 +18,8 @@
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
   'styles/**/*.css',
-  'bower_components/bootstrap/dist/css/bootstrap.min.css'
+  'bower_components/bootstrap/dist/css/bootstrap.min.css',
+  'bower_components/simplemde/dist/simplemde.min.css'
 ];
 
 
@@ -31,11 +32,11 @@ var jsFilesToInject = [
 
   // Dependencies like jQuery, or Angular are brought in here
   // 'js/dependencies/**/*.js',
-
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
-  // 'js/**/*.js''
-  'bower_components/rainyday.js'
+  'bower_components/simplemde/dist/*.min.js',
+  'bower_components/showdown/dist/*.min.js',
+  'js/init.js'
 ];
 
 

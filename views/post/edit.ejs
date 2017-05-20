@@ -8,8 +8,16 @@
 
     <div class="form-group">
       <label for="solution">Solution</label>
-      <input type="text" name="solution" value= "<%= post.solution %>" class="form-control"/>
+      <textarea id="solution" name="solution" value= "<%= post.solution %>" class="form-control"></textarea>
     </div>
     <input type="submit" name="commit" class="btn btn-primary"/>
   </form>
 </div>
+
+
+<script>
+  $(document).ready (function () {
+    var simplemde = new SimpleMDE({ element: document.getElementById("solution") });
+    simplemde.value(document.getElementById("solution").getAttribute("value"));
+  });
+</script>
