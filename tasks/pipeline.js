@@ -36,7 +36,7 @@ var jsFilesToInject = [
   // will be injected here in no particular order.
   'bower_components/simplemde/dist/*.min.js',
   'bower_components/showdown/dist/*.min.js',
-  'js/init.js'
+  'bower_components/phaser/build/phaser.min.js'
 ];
 
 

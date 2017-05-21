@@ -33,9 +33,9 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': 'PostController.index',
-
-  'get /hi': 'UserController.hi',
-  'get /bye': 'UserController.bye',
+  '/game': {
+    view: 'index'
+  },
 
   'get /post': 'PostController.index',
   'post /post': 'PostController.create',
