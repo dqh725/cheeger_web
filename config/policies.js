@@ -33,8 +33,12 @@ module.exports.policies = {
   * access)                                                                  *
   *                                                                          *
   ***************************************************************************/
+  PostController: {
+    new: auth.connect(basic),
+    edit: auth.connect(basic),
+    create: auth.connect(basic)
+  }
 
-  '*': auth.connect(basic),
 
   /***************************************************************************
   *                                                                          *
